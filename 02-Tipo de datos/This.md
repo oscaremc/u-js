@@ -52,3 +52,5 @@ var persona = {
 }
 
 si el contexto recorre primero el contexto global, luego el contexto local y de nuevo una nueva funcion contruye un nuevo contexto como lo llame en el ejemplo anterior: Referencia de tercner nivel. el THIS restablecer su contexto de windows pero no lo hacer gracias a que fue reasignado dentro de su contexto y se puede usar en un nivel mas profundo. 
+
+
