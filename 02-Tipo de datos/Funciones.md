@@ -54,8 +54,9 @@ function imprimir(nombre, apellido){        // la funcion esta esperando recibir
 
 imprimir( "carlos");                // Envio solo el nombre como paramentro 
 
-las funciones reciben objetos como parametros:
 
+
+las funciones reciben objetos como parametros:
 
 function imprimir(persona){        // la funcion esta esperando un parametro
     console.log( persona. nombre + " " + persona.apellido ); // como sabemos que recibimos en los parametros un obj extraemos el valor por punto
@@ -67,3 +68,53 @@ var obj = {             // creamos el objeto
 }
 
 imprimir( obj );                // enviamos el parametro como objeto. 
+
+
+
+el return de una funcion: 
+
+function obtenerAleatorio(){
+    return Math.random();
+}
+
+function obtenerNombre(){
+    return "Juan";
+}
+
+function esMayoroMenor(){
+    if(obtenerAleatorio() > 0.5 ){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function crearPersona(nombre, apellido){
+    return {
+        nombre: nomnbre,
+        apeliido: apellido
+    }
+}
+
+var persona = crearPersona("Maria", "Paz");
+
+function crearFunction(){
+    return function(nombre){
+        console.log( "Me creo" + nombre );
+        
+        return function(){
+            console.log("Segunda function");
+        } 
+    }
+}
+
+var nuevaFunction = crearFuncion();
+
+var segundaFuncion = nuevaFuncion( "Luis" )
+
+console.log(obtenerAleatorio())  // 10.5135494325169  "numero aleatorio"
+console.log(obtenerNombre())   // "juan"
+console.log(esMayoroMenor())  // true
+console.log (crearPersona(persona)) // Maria Paz
+console.log (segundaFuncion())   // me creo luis  segunda funcion
+
